@@ -35,13 +35,12 @@ public class Main {
     int nivelPermissao3 = 3;
 
     void verificarAcesso(){
-        Scanner scanner1 = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Digite o código de acesso: ");
-        int codigo = scanner1.nextInt();
+        int codigo = scanner.nextInt();
 
-        Scanner scanner2 = new Scanner(System.in);
         System.out.print("Digite o nível de permissão: ");
-        int nivelPermissao = scanner2.nextInt();
+        int nivelPermissao = scanner.nextInt();
 
         if(codigo == codigoAcesso && (nivelPermissao == nivelPermissao1 || nivelPermissao == nivelPermissao2 || nivelPermissao == nivelPermissao3)) {
             System.out.println("Acesso permitido. Bem-vindo ao sistema!");
@@ -54,8 +53,7 @@ public class Main {
                 System.out.println("Acesso negado. Nível de permissão inválido.");
             }
         }
-        scanner1.close();
-        scanner2.close();
+        scanner.close();
     }
 
     public static void main(String[] args) {

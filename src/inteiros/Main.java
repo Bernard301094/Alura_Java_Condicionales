@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class Main {
 
     void compararInteiros() {
-        Scanner scanner1 = new Scanner(System.in);
-        System.out.println("Digite o primeiro número:");
-        int num1 = scanner1.nextInt();
 
-        Scanner scanner2 = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o primeiro número:");
+        int num1 = scanner.nextInt();
+
         System.out.println("Digite o segundo número:");
-        int num2 = scanner2.nextInt();
+        int num2 = scanner.nextInt();
 
         if(num1 > num2 || num2 > num1 ) {
             if (num1 > num2) {
@@ -22,6 +22,7 @@ public class Main {
         } else {
             System.out.println("Ambos números são iguais");
         }
+        scanner.close();
     }
 
     public static void main(String[] args) {

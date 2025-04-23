@@ -13,5 +13,27 @@ Crie um programa que receba um valor e exiba se ele está dentro do intervalo pe
 
 package intervalo.numero;
 
+import java.util.Scanner;
+
 public class Main {
+    double valorMinimo = 1000;
+    double valorMaximo = 5000;
+
+    void calcularEmprestimo(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite o valor do empréstimo: ");
+        double valorEmprestimo = scanner.nextDouble();
+
+        if(valorEmprestimo >= valorMinimo && valorEmprestimo <= valorMaximo){
+            System.out.println("O valor " + valorEmprestimo + ", está dentro do intervalo permitido para empréstimo.");
+        } else {
+            System.out.println("O valor " + valorEmprestimo + ", não está dentro do intervalo permitido para empréstimo.");
+        }
+        scanner.close();
+    }
+
+    public static void main(String[] args) {
+        Main emprestimo = new Main();
+        emprestimo.calcularEmprestimo();
+    }
 }

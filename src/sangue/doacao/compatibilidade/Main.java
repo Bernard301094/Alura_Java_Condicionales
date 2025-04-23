@@ -21,5 +21,38 @@ Como você criaria um programa que receba a idade e o peso do doador e exiba uma
 
 package sangue.doacao.compatibilidade;
 
-public class Mian {
+import java.util.Scanner;
+
+public class Main {
+    int idadeMinima = 18;
+    int idadeMaxima = 65;
+    int pesoMinimo = 50;
+
+    void verificaCompatibilidade() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite a idade do doador: ");
+        int idade = scanner.nextInt();
+
+        System.out.print("Digite o peso do doador (em kg): ");
+        int peso = scanner.nextInt();
+
+        if(idade <= idadeMaxima && idade >= idadeMinima && peso > pesoMinimo) {
+            System.out.println("O doador é compatível.");
+        } else {
+            System.out.println("O doador não é compatível.");
+            if(idade < idadeMinima || idade > idadeMaxima) {
+                System.out.println("Motivo: Deve ter entre " + idadeMinima + " e " + idadeMaxima + " anos.");
+            }
+            if(peso <= pesoMinimo) {
+                System.out.println("Motivo: Deve pesar mais de " + pesoMinimo + " kg.");
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static void main(String[] args) {
+        Main compatibilidade = new Main();
+        compatibilidade.verificaCompatibilidade();
+    }
 }
