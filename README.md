@@ -49,5 +49,5 @@ Cada exercício está contido em um pacote separado sob o diretório `src`, com 
 
 ## Requisitos
 
-- Kit de Desenvolvimento Java (JDK) - O projeto está configurado para usar OpenJDK 24
-- IDE Java (preferencialmente IntelliJ IDEA)
+- Kit de Desenvolvimento Java (JDK) - O projeto está configurado para usar OpenJDK 24.
+- IDE Java (preferencialmente IntelliJ IDEA).
